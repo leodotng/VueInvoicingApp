@@ -6,3 +6,11 @@ const PORT = process.env.PORT || 3128;
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+app.get('/', function(req,res) {
+    res.send("Welcome to Invoicing App");
+});
+
+app.listen(PORT, function() {
+    console.log(`App running on localhost:${PORT}`);
+});
